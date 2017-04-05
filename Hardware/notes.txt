@@ -1,0 +1,76 @@
+===================================================================================================
+Design Notes
+===================================================================================================
+
+===================================================================================================
+Clock Selection
+
+ATMEGA328PB Requirements:
+ - Use external 16 MHz external clock, ceramic resonator or crystal w/out any clkdiv fuses set
+ - General input reqs (assume Vcc = 5.0 VDC):
+    - XTAL1 input low voltage: -0.5 to 0.5 VDC
+    - XTAL1 input high voltage: 3.5 to 5.5 VDC
+    - XTAL2 follows GPIO min/max. If used w/crystal or ceramic resonator reqs don't matter
+ - External clock reqs:
+    - 50 ns minimum clock period
+    - 20 ns minimum high time
+    - 20 ns minimum low time
+    - Max 0.5 us rise time
+    - Max 0.5 us fall time
+    - 2% maximum jitter
+
+---    
+    
+Ceramic Oscillator CSTCE16M0V13L99-R0 16 MHz Ceramic Resonator w/ Built in Load Capacitors
+
+CSTCE16M0V13L99-R0
+    Initial freq tolerance:                 +/- 0.1%
+    Max freq shift (temperature):           +/- 0.15%
+    Frequency stability:                    +/- 0.3%
+                                            ---------
+    Maximum frequency shift (initial):      +/- 0.55% (152 kHz)
+    Maximum frequency shift (operating):    +/- 0.45% (72 kHz)
+    
+Benefits:
+    - Small
+    - Easy to use
+    - Only 1 part required
+    - Lowish power
+    - Extremely cheap
+    
+Drawbacks
+    - Crappy frequency stability (Up to 4500 ppm off!)
+    - Uses two GPIO pins
+    - Not very noise immune
+ 
+---
+
+External Oscillator (TTL Clock) ECS-3961-160-AU-TR 16 MHz HCMOS XO Oscillator
+
+ECS-3961-160-AU-TR
+    Frequency stability:        +/-100 ppm (+/- 1.6 kHz)
+    High output:                4.5 to 5.0 VDC
+    Low output:                 0.0 to 
+    Output load: Max            30 pF
+    Rise time: Max              5 ns
+    Fall time: Max              5 ns
+    Startup time:               10 ms
+    Input current:              20 mA
+    
+Benefits:
+    - Small
+    - Great frequency stability
+    - Cheapish
+    - Very robust
+    - Uses only one GPIO pin
+    - Can disable output
+
+Drawbacks:
+    - Requires external decoupling capacitor
+    - Slightly more invovled design
+
+---
+    
+Selection: ECS-3961-160-AU-TR 16 MHz HCMOS XO Oscillator
+
+===================================================================================================
