@@ -1275,4 +1275,6 @@ Wire Wire Line
 NoConn ~ 14700 8225
 Wire Wire Line
 	14975 7700 14975 7675
+Text Label 12000 7125 0    47   ~ 0
+CLK
 $EndSCHEMATC
