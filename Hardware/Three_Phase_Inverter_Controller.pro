@@ -1,4 +1,4 @@
-update=4/8/2017 1:19:54 PM
+update=4/8/2017 9:00:30 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -29,7 +29,7 @@ version=1
 version=1
 LibDir=
 [eeschema/libraries]
-LibName1=EV_FET_DRIVER-rescue
+LibName1=Three_Phase_Inverter_Controller-rescue
 LibName2=power
 LibName3=device
 LibName4=transistors
@@ -60,3 +60,13 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=C:/Users/jfrit/Documents/GitHub/Kicad_Lib/FritzLib
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=PDFs/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
