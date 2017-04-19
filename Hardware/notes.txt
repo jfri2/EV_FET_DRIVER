@@ -72,5 +72,143 @@ Drawbacks:
 ---
     
 Selection: ECS-3961-160-AU-TR 16 MHz HCMOS XO Oscillator
+===================================================================================================
 
 ===================================================================================================
+Buck Converter/Power Supply Design
+
+Component References
+    R45      = Low value series resistor for inrush limiting (ERJ-8CWJR050V, 1206 package)
+    C3/C4/C5  Bulk capacitors
+    U2       = LMR16010 Buck Regulator
+    C7/C9    = Input Caps (1x 4.7 uF, 1x 100nF)
+    R17      = RT/SYNC resistor = 45.3 kOhm (RC0603FR-0745K3L)
+    C16      = Bootstrap Capacitors
+    D2       = Flyback diode
+    L1       = Output inductor
+    R25      = feedback resistor (high)
+    R26      = feedback resistor (low)
+    C21      = Output capacitor
+    C25/C26  = Extra output capacitors (2x 4.7 uF, away from U2)
+    C43      = Feedback cap = 27 pF (C0603C270J5GACTU)
+===================================================================================================    
+D2 Selection
+ - All diodes must be same type on this board
+ - Breakdown voltage must be > 48 VDC + 25% = 60 VDC (48 VDC is highest voltage per gate driver circuitry)
+ - Must be < 0.7 Forward voltage drop @ minimum 100 mA
+ - Must be tweezer-placable surface mount package
+ - At least 2A cont. rated
+ - Preference given to fastest & lowest forward voltage drop device that meets these requirements 
+
+Selected component: PMEG6030ETP
+ - Technology: Schottky
+ - Reverse voltage: min 60 VDC
+ - Reverse current: typ 80 uA
+ - Forward current range (Vf < 0.7 VDC): 
+ - Max Vf in range: 590 mV (3A)
+ - Typical Vf for <1 A: 350 mV
+ - Reverse recovery time: 12 ns
+ - Capacitance: 360 pF @ 1 V, 1 MHz
+ - Package: SOD-128
+=================================================================================================== 
+Input/Output Capacitors (all 4.7uF & 100 nF caps on board) Selection:
+ - Must be X7R or X5R Ceramic
+ - At least 30 VDC rated (2x 15Vin)
+ - ESR < 100 mOhms @ 1 MHz
+ - +/- 5% or better (100nF), +/- 10% or better (4.7uF)
+ - Tweezer placable SMD package
+ 
+Selected 4.7 uF capacitor: CL31B475KBHVPNE
+ - Voltage Rating: 50 VDC
+ - ESR: Lowish
+ - Package: 1206
+ 
+Selected 100nF capacitor: CC0603JRX7R9BB104
+ - Voltage Rating: 50 VDC
+ - ESR: < 100mOhm @ 1 MHz
+ - Package: 0603
+=================================================================================================== 
+Bulk Capacitors
+ - At least 30 VDC rated (2x 15Vin)
+ - At least 150 uF each
+ - ESR < 500 mOhms
+ - Surface mount, lowish profile
+ 
+Selected capacitors: AFK157M50G24T-F
+ - Voltage Rating: 50 VDC
+ - ESR: 180 mOhm
+ - Size: 10.00 mm dia x 10.50 mm height
+===================================================================================================  
+Feedback Resistors
+ - Output voltage set using following equation (R_top is R25, R_bot is R26):
+R_top = ((5.0 VDC - 0.75) * R_bot) / 0.75
+If R_top = 100 kOhm (0.1%), R_bot = 17.65 kOhm
+
+V_actual = 4.96348 VDC
+Use 1% or better resistors
+
+Selected R_top: RC0603FR-07100KL
+ - Package: 0603
+Selected R_bot: RC0603FR-0717K8L
+ - Package: 0603
+ 
+TI WEBENCH Design Center:
+R_top = 68.0 kOhm
+R_bot = 12.0 kOhm
+
+Selected R_Top: 68.0 kOhm
+ - Package: 0603
+Selected R_Bot: 12.0 kOhm
+ - Package: 0603
+===================================================================================================  
+Output Inductor & Capacitor
+
+Datasheet
+ - Switching Frequency: 1912 kHz
+ - Max input voltage: 18 VDC
+ - Max peak-to-peak ripple current 
+ - Kind = 50% [50 mA to 250 mA] current range
+ - Inductor should be capable of 500 mArms & 1 A saturation current
+ - delta_I =((Vout * (Vin_max - Vout)) / (Vin_max * L * Fsw))
+ - delta_I = 0.2 * 250 mA = 50 mA
+ - Lmin = ((Vin_max - Vout) / (Iout * Kind)) * (Vout / (Vin_max * Fsw))
+ - Lnominal = 37.7 uH
+ - Lmin = 15.1 uH
+ - Needs to be ferrite inductor
+ - Equates to 85% efficiency
+
+TI WEBENCH Design Center:
+
+Selected L: SDR0604-680KL
+ - Inductance: 68.0 uH
+ - ESR: 0.520 Ohm
+===================================================================================================
+
+=================================================================================================== 
+MCP 6561 (Comparator) calculations
+
+R18 & R19 resistor divider:
+ - scale input down from [5.5 VDC to 18 VDC] to [0 VDC to 5 VDC] ish
+ - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
