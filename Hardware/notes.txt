@@ -188,8 +188,27 @@ Selected L: SDR0604-680KL
 MCP 6561 (Comparator) calculations
 
 R18 & R19 resistor divider:
- - scale input down from [5.5 VDC to 18 VDC] to [0 VDC to 5 VDC] ish
- - 
+ - scale input down from [5.5 VDC to 18 VDC] to [0 VDC to 5 VDC] ish: 26k & 10k resistors. 10.5 VDC = 2.917 VDC out
+ - Vtrip_low_to_high = around 10.5 VDC
+ - Vtrip_high_to_low = around 11.0 VDC
+ 
+ - R2 = Rtop (R22)
+ - R3 = Rbot (R23), assume 10k
+ - Rf = Rfeedback (R24), assume 470k
+ 
+ - R23 = (R2 * R3) / (R2 + R3)
+ - V23 = (Vdd * (R3 / (R2 + R3))) 
+ - Vtrip_low_to_high = (Voh * (R23 / (R23 + Rf))) + (V23 * (Rf / (R23 + Rf)))
+ - Vtrip_high_to_low = (Vol * (R23 / (R23 + Rf))) + (V23 * (Rf / (R23 + Rf)))
+
+ w/ [R2, R3, Rf] = [6.8k, 10k, 500k]:
+ - Vtrip_low_to_high = 2.9523 VDC (10.628 VDC in)
+ - Vtrip_high_to_low = 2.9924 VDC (10.773 VDC in)
+ 
+ w/ [R2, R3, Rf] = [7.2k, 10k, 500k]:
+ - Vtrip_low_to_high = 2.8828 VDC (10.528 VDC in)
+ - Vtrip_high_to_low = 2.9244 VDC (10.378 VDC in) 
+ 
 
 
 
