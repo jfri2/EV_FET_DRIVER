@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:Three_Phase_Inverter_Controller-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -2690,12 +2689,12 @@ $EndComp
 $Comp
 L R_Small R45
 U 1 1 591E717E
-P 2725 1450
-F 0 "R45" V 2650 1375 50  0000 L CNN
-F 1 "0.05R" V 2800 1350 50  0000 L CNN
-F 2 "Resistors_SMD:R_1206" H 2725 1450 50  0001 C CNN
-F 3 "" H 2725 1450 50  0001 C CNN
-	1    2725 1450
+P 2975 1450
+F 0 "R45" V 2900 1375 50  0000 L CNN
+F 1 "0.05R" V 3050 1350 50  0000 L CNN
+F 2 "Resistors_SMD:R_1206" H 2975 1450 50  0001 C CNN
+F 3 "" H 2975 1450 50  0001 C CNN
+	1    2975 1450
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -3007,7 +3006,7 @@ Wire Wire Line
 	4450 1575 4450 1450
 Connection ~ 4450 1450
 Wire Wire Line
-	2375 1450 2625 1450
+	2375 1450 2875 1450
 Wire Wire Line
 	4450 1775 4450 1950
 Wire Wire Line
@@ -3849,7 +3848,7 @@ Wire Notes Line
 Wire Notes Line
 	7125 3825 7125 4075
 Wire Wire Line
-	2825 1450 4000 1450
+	3075 1450 4000 1450
 Connection ~ 3375 1450
 Text Label 2400 1450 0    47   ~ 0
 VIN
@@ -3899,17 +3898,16 @@ Connection ~ 11350 1725
 $Comp
 L TEST TP4
 U 1 1 5921A38A
-P 3000 1400
-F 0 "TP4" H 3078 1540 50  0000 L CNN
-F 1 "VIN" H 3078 1449 50  0000 L CNN
-F 2 "Measurement_Points:Test_Point_Keystone_5019_Minature" H 3000 1400 50  0001 C CNN
-F 3 "" H 3000 1400 50  0001 C CNN
-	1    3000 1400
+P 2700 1400
+F 0 "TP4" H 2525 1600 50  0000 L CNN
+F 1 "VIN" H 2525 1525 50  0000 L CNN
+F 2 "Measurement_Points:Test_Point_Keystone_5019_Minature" H 2700 1400 50  0001 C CNN
+F 3 "" H 2700 1400 50  0001 C CNN
+	1    2700 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 1400 3000 1450
-Connection ~ 3000 1450
+	2700 1400 2700 1450
 Text Notes 8850 5125 0    47   ~ 0
 Trip point (Low to High): 10.628 VDC (12V_HLDP)\nTrip point (High to Low): 10.773 VDC (12V_HLDP)
 $Comp
@@ -4175,4 +4173,5 @@ Wire Wire Line
 	1300 8825 1300 10550
 Wire Wire Line
 	1200 8725 1200 10650
+Connection ~ 2700 1450
 $EndSCHEMATC
