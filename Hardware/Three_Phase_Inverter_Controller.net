@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\jfrit\Documents\GitHub\Three_Phase_Inverter_Controller\Hardware\Three_Phase_Inverter_Controller.sch)
-    (date "5/2/2017 11:52:05 PM")
+    (date "5/2/2017 11:52:44 PM")
     (tool "Eeschema (2017-04-02 revision 2f9be81b1)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
