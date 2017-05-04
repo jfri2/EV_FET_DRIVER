@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\jfrit\Documents\GitHub\Three_Phase_Inverter_Controller\Hardware\Three_Phase_Inverter_Controller.sch)
-    (date "5/2/2017 11:52:44 PM")
+    (date "5/3/2017 8:00:02 PM")
     (tool "Eeschema (2017-04-02 revision 2f9be81b1)-makepkg")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1597,7 +1597,7 @@
       (node (ref C11) (pin 1))
       (node (ref U1) (pin 6))
       (node (ref R18) (pin 1)))
-    (net (code 38) (name /YLED)
+    (net (code 38) (name /RLED)
       (node (ref R30) (pin 2))
       (node (ref U6) (pin 4)))
     (net (code 39) (name /GLED)
