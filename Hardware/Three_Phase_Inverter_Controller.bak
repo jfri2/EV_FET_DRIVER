@@ -28,9 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:FritzLib
 LIBS:Three_Phase_Inverter_Controller-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -2232,8 +2231,6 @@ Entry Wire Line
 	3625 8925 3725 8825
 Entry Wire Line
 	3625 9025 3725 8925
-Text Label 1700 8625 2    47   ~ 0
-ULED
 Text Label 1525 8825 0    47   ~ 0
 PE2
 Text Label 1525 8725 0    47   ~ 0
@@ -3262,7 +3259,7 @@ Connection ~ 13900 10125
 Wire Wire Line
 	14125 9700 14125 9475
 Wire Wire Line
-	14125 9475 13900 9475
+	13900 9475 14125 9475
 Wire Wire Line
 	13900 9375 13900 9500
 Connection ~ 13900 9475
@@ -3579,7 +3576,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 10650 7600 10025
 Wire Wire Line
-	1975 8625 1500 8625
+	1975 8625 1425 8625
 Wire Bus Line
 	16075 4150 16075 12250
 Wire Bus Line
@@ -4259,4 +4256,6 @@ Text Label 13775 14075 0    47   ~ 0
 EX_SD/SCK
 Text Label 13775 13975 0    47   ~ 0
 M_SD/MISO
+Text Label 1450 8625 0    47   ~ 0
+EX_SD/SCK
 $EndSCHEMATC

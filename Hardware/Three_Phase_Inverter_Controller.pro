@@ -1,4 +1,4 @@
-update=5/2/2017 11:52:14 PM
+update=5/15/2017 9:58:39 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -67,6 +67,6 @@ PlotDirectoryName=PDFs/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
-SpiceAjustPassiveValues=0
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
 LabSize=60
-ERC_TestSimilarLabels=1
