@@ -1,0 +1,521 @@
+
+BringUp.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         000000be  00800100  0000056e  000005e2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000056e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  000006a0  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000006d0  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000060  00000000  00000000  00000710  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001044  00000000  00000000  00000770  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000ac7  00000000  00000000  000017b4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004a1  00000000  00000000  0000227b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000114  00000000  00000000  0000271c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    0000065e  00000000  00000000  00002830  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000003ac  00000000  00000000  00002e8e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000040  00000000  00000000  0000323a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5a 00 	jmp	0xb4	; 0xb4 <__ctors_end>
+   4:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+   8:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+   c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  10:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  14:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  18:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  1c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  20:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  24:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  28:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  2c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  30:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  34:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  38:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  3c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  40:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  44:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  48:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  4c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  50:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  54:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  58:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  5c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  60:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  64:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  68:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  6c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  70:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  74:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  78:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  7c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  80:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  84:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  88:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  8c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  90:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  94:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  98:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  9c:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  a0:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  a4:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  a8:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  ac:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+  b0:	0c 94 6f 00 	jmp	0xde	; 0xde <__bad_interrupt>
+
+000000b4 <__ctors_end>:
+  b4:	11 24       	eor	r1, r1
+  b6:	1f be       	out	0x3f, r1	; 63
+  b8:	cf ef       	ldi	r28, 0xFF	; 255
+  ba:	d8 e0       	ldi	r29, 0x08	; 8
+  bc:	de bf       	out	0x3e, r29	; 62
+  be:	cd bf       	out	0x3d, r28	; 61
+
+000000c0 <__do_copy_data>:
+  c0:	11 e0       	ldi	r17, 0x01	; 1
+  c2:	a0 e0       	ldi	r26, 0x00	; 0
+  c4:	b1 e0       	ldi	r27, 0x01	; 1
+  c6:	ee e6       	ldi	r30, 0x6E	; 110
+  c8:	f5 e0       	ldi	r31, 0x05	; 5
+  ca:	02 c0       	rjmp	.+4      	; 0xd0 <__do_copy_data+0x10>
+  cc:	05 90       	lpm	r0, Z+
+  ce:	0d 92       	st	X+, r0
+  d0:	ae 3b       	cpi	r26, 0xBE	; 190
+  d2:	b1 07       	cpc	r27, r17
+  d4:	d9 f7       	brne	.-10     	; 0xcc <__do_copy_data+0xc>
+  d6:	0e 94 f3 00 	call	0x1e6	; 0x1e6 <main>
+  da:	0c 94 b5 02 	jmp	0x56a	; 0x56a <_exit>
+
+000000de <__bad_interrupt>:
+  de:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000e2 <gpio_init_pin>:
+}
+
+void gpio_clear_pin(GPIO_PIN gpio_pin)
+{
+    *gpio_pin.port &= ~(1<<gpio_pin.pin);
+}
+  e2:	0f 93       	push	r16
+  e4:	1f 93       	push	r17
+  e6:	cf 93       	push	r28
+  e8:	df 93       	push	r29
+  ea:	cd b7       	in	r28, 0x3d	; 61
+  ec:	de b7       	in	r29, 0x3e	; 62
+  ee:	2a 97       	sbiw	r28, 0x0a	; 10
+  f0:	0f b6       	in	r0, 0x3f	; 63
+  f2:	f8 94       	cli
+  f4:	de bf       	out	0x3e, r29	; 62
+  f6:	0f be       	out	0x3f, r0	; 63
+  f8:	cd bf       	out	0x3d, r28	; 61
+  fa:	09 83       	std	Y+1, r16	; 0x01
+  fc:	1a 83       	std	Y+2, r17	; 0x02
+  fe:	2b 83       	std	Y+3, r18	; 0x03
+ 100:	3c 83       	std	Y+4, r19	; 0x04
+ 102:	4d 83       	std	Y+5, r20	; 0x05
+ 104:	5e 83       	std	Y+6, r21	; 0x06
+ 106:	6f 83       	std	Y+7, r22	; 0x07
+ 108:	78 87       	std	Y+8, r23	; 0x08
+ 10a:	89 87       	std	Y+9, r24	; 0x09
+ 10c:	9a 87       	std	Y+10, r25	; 0x0a
+ 10e:	4a 81       	ldd	r20, Y+2	; 0x02
+ 110:	5b 81       	ldd	r21, Y+3	; 0x03
+ 112:	ae 81       	ldd	r26, Y+6	; 0x06
+ 114:	bf 81       	ldd	r27, Y+7	; 0x07
+ 116:	71 11       	cpse	r23, r1
+ 118:	1b c0       	rjmp	.+54     	; 0x150 <gpio_init_pin+0x6e>
+ 11a:	69 2f       	mov	r22, r25
+ 11c:	81 e0       	ldi	r24, 0x01	; 1
+ 11e:	90 e0       	ldi	r25, 0x00	; 0
+ 120:	02 c0       	rjmp	.+4      	; 0x126 <gpio_init_pin+0x44>
+ 122:	88 0f       	add	r24, r24
+ 124:	99 1f       	adc	r25, r25
+ 126:	0a 95       	dec	r16
+ 128:	e2 f7       	brpl	.-8      	; 0x122 <gpio_init_pin+0x40>
+ 12a:	38 2f       	mov	r19, r24
+ 12c:	30 95       	com	r19
+ 12e:	2c 91       	ld	r18, X
+ 130:	23 23       	and	r18, r19
+ 132:	2c 93       	st	X, r18
+ 134:	61 11       	cpse	r22, r1
+ 136:	05 c0       	rjmp	.+10     	; 0x142 <gpio_init_pin+0x60>
+ 138:	fa 01       	movw	r30, r20
+ 13a:	80 81       	ld	r24, Z
+ 13c:	38 23       	and	r19, r24
+ 13e:	30 83       	st	Z, r19
+ 140:	22 c0       	rjmp	.+68     	; 0x186 <gpio_init_pin+0xa4>
+ 142:	61 30       	cpi	r22, 0x01	; 1
+ 144:	01 f5       	brne	.+64     	; 0x186 <gpio_init_pin+0xa4>
+ 146:	fa 01       	movw	r30, r20
+ 148:	90 81       	ld	r25, Z
+ 14a:	89 2b       	or	r24, r25
+ 14c:	80 83       	st	Z, r24
+ 14e:	1b c0       	rjmp	.+54     	; 0x186 <gpio_init_pin+0xa4>
+ 150:	71 30       	cpi	r23, 0x01	; 1
+ 152:	c9 f4       	brne	.+50     	; 0x186 <gpio_init_pin+0xa4>
+ 154:	39 85       	ldd	r19, Y+9	; 0x09
+ 156:	81 e0       	ldi	r24, 0x01	; 1
+ 158:	90 e0       	ldi	r25, 0x00	; 0
+ 15a:	02 c0       	rjmp	.+4      	; 0x160 <gpio_init_pin+0x7e>
+ 15c:	88 0f       	add	r24, r24
+ 15e:	99 1f       	adc	r25, r25
+ 160:	0a 95       	dec	r16
+ 162:	e2 f7       	brpl	.-8      	; 0x15c <gpio_init_pin+0x7a>
+ 164:	2c 91       	ld	r18, X
+ 166:	28 2b       	or	r18, r24
+ 168:	2c 93       	st	X, r18
+ 16a:	31 11       	cpse	r19, r1
+ 16c:	06 c0       	rjmp	.+12     	; 0x17a <gpio_init_pin+0x98>
+ 16e:	80 95       	com	r24
+ 170:	fa 01       	movw	r30, r20
+ 172:	90 81       	ld	r25, Z
+ 174:	89 23       	and	r24, r25
+ 176:	80 83       	st	Z, r24
+ 178:	06 c0       	rjmp	.+12     	; 0x186 <gpio_init_pin+0xa4>
+ 17a:	31 30       	cpi	r19, 0x01	; 1
+ 17c:	21 f4       	brne	.+8      	; 0x186 <gpio_init_pin+0xa4>
+ 17e:	fa 01       	movw	r30, r20
+ 180:	90 81       	ld	r25, Z
+ 182:	89 2b       	or	r24, r25
+ 184:	80 83       	st	Z, r24
+ 186:	2a 96       	adiw	r28, 0x0a	; 10
+ 188:	0f b6       	in	r0, 0x3f	; 63
+ 18a:	f8 94       	cli
+ 18c:	de bf       	out	0x3e, r29	; 62
+ 18e:	0f be       	out	0x3f, r0	; 63
+ 190:	cd bf       	out	0x3d, r28	; 61
+ 192:	df 91       	pop	r29
+ 194:	cf 91       	pop	r28
+ 196:	1f 91       	pop	r17
+ 198:	0f 91       	pop	r16
+ 19a:	08 95       	ret
+
+0000019c <gpio_toggle_pin>:
+
+void gpio_toggle_pin(GPIO_PIN gpio_pin)
+{
+ 19c:	0f 93       	push	r16
+ 19e:	1f 93       	push	r17
+ 1a0:	cf 93       	push	r28
+ 1a2:	df 93       	push	r29
+ 1a4:	cd b7       	in	r28, 0x3d	; 61
+ 1a6:	de b7       	in	r29, 0x3e	; 62
+ 1a8:	2a 97       	sbiw	r28, 0x0a	; 10
+ 1aa:	0f b6       	in	r0, 0x3f	; 63
+ 1ac:	f8 94       	cli
+ 1ae:	de bf       	out	0x3e, r29	; 62
+ 1b0:	0f be       	out	0x3f, r0	; 63
+ 1b2:	cd bf       	out	0x3d, r28	; 61
+ 1b4:	1a 83       	std	Y+2, r17	; 0x02
+ 1b6:	2b 83       	std	Y+3, r18	; 0x03
+ 1b8:	ea 81       	ldd	r30, Y+2	; 0x02
+ 1ba:	fb 81       	ldd	r31, Y+3	; 0x03
+    *gpio_pin.port ^= (1<<gpio_pin.pin);
+ 1bc:	81 e0       	ldi	r24, 0x01	; 1
+ 1be:	90 e0       	ldi	r25, 0x00	; 0
+ 1c0:	02 c0       	rjmp	.+4      	; 0x1c6 <gpio_toggle_pin+0x2a>
+ 1c2:	88 0f       	add	r24, r24
+ 1c4:	99 1f       	adc	r25, r25
+ 1c6:	0a 95       	dec	r16
+ 1c8:	e2 f7       	brpl	.-8      	; 0x1c2 <gpio_toggle_pin+0x26>
+ 1ca:	90 81       	ld	r25, Z
+ 1cc:	89 27       	eor	r24, r25
+ 1ce:	80 83       	st	Z, r24
+}
+ 1d0:	2a 96       	adiw	r28, 0x0a	; 10
+ 1d2:	0f b6       	in	r0, 0x3f	; 63
+ 1d4:	f8 94       	cli
+ 1d6:	de bf       	out	0x3e, r29	; 62
+ 1d8:	0f be       	out	0x3f, r0	; 63
+ 1da:	cd bf       	out	0x3d, r28	; 61
+ 1dc:	df 91       	pop	r29
+ 1de:	cf 91       	pop	r28
+ 1e0:	1f 91       	pop	r17
+ 1e2:	0f 91       	pop	r16
+ 1e4:	08 95       	ret
+
+000001e6 <main>:
+#include "gpio.h"
+
+int main(void)
+{
+    // Init GPIO Pins
+    gpio_init_pin(POS_A_PIN);
+ 1e6:	00 91 b4 01 	lds	r16, 0x01B4	; 0x8001b4 <POS_A_PIN>
+ 1ea:	10 91 b5 01 	lds	r17, 0x01B5	; 0x8001b5 <POS_A_PIN+0x1>
+ 1ee:	20 91 b6 01 	lds	r18, 0x01B6	; 0x8001b6 <POS_A_PIN+0x2>
+ 1f2:	30 91 b7 01 	lds	r19, 0x01B7	; 0x8001b7 <POS_A_PIN+0x3>
+ 1f6:	40 91 b8 01 	lds	r20, 0x01B8	; 0x8001b8 <POS_A_PIN+0x4>
+ 1fa:	50 91 b9 01 	lds	r21, 0x01B9	; 0x8001b9 <POS_A_PIN+0x5>
+ 1fe:	60 91 ba 01 	lds	r22, 0x01BA	; 0x8001ba <POS_A_PIN+0x6>
+ 202:	70 91 bb 01 	lds	r23, 0x01BB	; 0x8001bb <POS_A_PIN+0x7>
+ 206:	80 91 bc 01 	lds	r24, 0x01BC	; 0x8001bc <POS_A_PIN+0x8>
+ 20a:	90 91 bd 01 	lds	r25, 0x01BD	; 0x8001bd <POS_A_PIN+0x9>
+ 20e:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(POS_B_PIN);
+ 212:	00 91 aa 01 	lds	r16, 0x01AA	; 0x8001aa <POS_B_PIN>
+ 216:	10 91 ab 01 	lds	r17, 0x01AB	; 0x8001ab <POS_B_PIN+0x1>
+ 21a:	20 91 ac 01 	lds	r18, 0x01AC	; 0x8001ac <POS_B_PIN+0x2>
+ 21e:	30 91 ad 01 	lds	r19, 0x01AD	; 0x8001ad <POS_B_PIN+0x3>
+ 222:	40 91 ae 01 	lds	r20, 0x01AE	; 0x8001ae <POS_B_PIN+0x4>
+ 226:	50 91 af 01 	lds	r21, 0x01AF	; 0x8001af <POS_B_PIN+0x5>
+ 22a:	60 91 b0 01 	lds	r22, 0x01B0	; 0x8001b0 <POS_B_PIN+0x6>
+ 22e:	70 91 b1 01 	lds	r23, 0x01B1	; 0x8001b1 <POS_B_PIN+0x7>
+ 232:	80 91 b2 01 	lds	r24, 0x01B2	; 0x8001b2 <POS_B_PIN+0x8>
+ 236:	90 91 b3 01 	lds	r25, 0x01B3	; 0x8001b3 <POS_B_PIN+0x9>
+ 23a:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(POS_C_PIN);
+ 23e:	00 91 a0 01 	lds	r16, 0x01A0	; 0x8001a0 <POS_C_PIN>
+ 242:	10 91 a1 01 	lds	r17, 0x01A1	; 0x8001a1 <POS_C_PIN+0x1>
+ 246:	20 91 a2 01 	lds	r18, 0x01A2	; 0x8001a2 <POS_C_PIN+0x2>
+ 24a:	30 91 a3 01 	lds	r19, 0x01A3	; 0x8001a3 <POS_C_PIN+0x3>
+ 24e:	40 91 a4 01 	lds	r20, 0x01A4	; 0x8001a4 <POS_C_PIN+0x4>
+ 252:	50 91 a5 01 	lds	r21, 0x01A5	; 0x8001a5 <POS_C_PIN+0x5>
+ 256:	60 91 a6 01 	lds	r22, 0x01A6	; 0x8001a6 <POS_C_PIN+0x6>
+ 25a:	70 91 a7 01 	lds	r23, 0x01A7	; 0x8001a7 <POS_C_PIN+0x7>
+ 25e:	80 91 a8 01 	lds	r24, 0x01A8	; 0x8001a8 <POS_C_PIN+0x8>
+ 262:	90 91 a9 01 	lds	r25, 0x01A9	; 0x8001a9 <POS_C_PIN+0x9>
+ 266:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(MODE_PIN);
+ 26a:	00 91 96 01 	lds	r16, 0x0196	; 0x800196 <MODE_PIN>
+ 26e:	10 91 97 01 	lds	r17, 0x0197	; 0x800197 <MODE_PIN+0x1>
+ 272:	20 91 98 01 	lds	r18, 0x0198	; 0x800198 <MODE_PIN+0x2>
+ 276:	30 91 99 01 	lds	r19, 0x0199	; 0x800199 <MODE_PIN+0x3>
+ 27a:	40 91 9a 01 	lds	r20, 0x019A	; 0x80019a <MODE_PIN+0x4>
+ 27e:	50 91 9b 01 	lds	r21, 0x019B	; 0x80019b <MODE_PIN+0x5>
+ 282:	60 91 9c 01 	lds	r22, 0x019C	; 0x80019c <MODE_PIN+0x6>
+ 286:	70 91 9d 01 	lds	r23, 0x019D	; 0x80019d <MODE_PIN+0x7>
+ 28a:	80 91 9e 01 	lds	r24, 0x019E	; 0x80019e <MODE_PIN+0x8>
+ 28e:	90 91 9f 01 	lds	r25, 0x019F	; 0x80019f <MODE_PIN+0x9>
+ 292:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(INV_MCU_SHDN_PIN);
+ 296:	00 91 8c 01 	lds	r16, 0x018C	; 0x80018c <INV_MCU_SHDN_PIN>
+ 29a:	10 91 8d 01 	lds	r17, 0x018D	; 0x80018d <INV_MCU_SHDN_PIN+0x1>
+ 29e:	20 91 8e 01 	lds	r18, 0x018E	; 0x80018e <INV_MCU_SHDN_PIN+0x2>
+ 2a2:	30 91 8f 01 	lds	r19, 0x018F	; 0x80018f <INV_MCU_SHDN_PIN+0x3>
+ 2a6:	40 91 90 01 	lds	r20, 0x0190	; 0x800190 <INV_MCU_SHDN_PIN+0x4>
+ 2aa:	50 91 91 01 	lds	r21, 0x0191	; 0x800191 <INV_MCU_SHDN_PIN+0x5>
+ 2ae:	60 91 92 01 	lds	r22, 0x0192	; 0x800192 <INV_MCU_SHDN_PIN+0x6>
+ 2b2:	70 91 93 01 	lds	r23, 0x0193	; 0x800193 <INV_MCU_SHDN_PIN+0x7>
+ 2b6:	80 91 94 01 	lds	r24, 0x0194	; 0x800194 <INV_MCU_SHDN_PIN+0x8>
+ 2ba:	90 91 95 01 	lds	r25, 0x0195	; 0x800195 <INV_MCU_SHDN_PIN+0x9>
+ 2be:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(INV_EXT_SHDN_PIN);
+ 2c2:	00 91 82 01 	lds	r16, 0x0182	; 0x800182 <INV_EXT_SHDN_PIN>
+ 2c6:	10 91 83 01 	lds	r17, 0x0183	; 0x800183 <INV_EXT_SHDN_PIN+0x1>
+ 2ca:	20 91 84 01 	lds	r18, 0x0184	; 0x800184 <INV_EXT_SHDN_PIN+0x2>
+ 2ce:	30 91 85 01 	lds	r19, 0x0185	; 0x800185 <INV_EXT_SHDN_PIN+0x3>
+ 2d2:	40 91 86 01 	lds	r20, 0x0186	; 0x800186 <INV_EXT_SHDN_PIN+0x4>
+ 2d6:	50 91 87 01 	lds	r21, 0x0187	; 0x800187 <INV_EXT_SHDN_PIN+0x5>
+ 2da:	60 91 88 01 	lds	r22, 0x0188	; 0x800188 <INV_EXT_SHDN_PIN+0x6>
+ 2de:	70 91 89 01 	lds	r23, 0x0189	; 0x800189 <INV_EXT_SHDN_PIN+0x7>
+ 2e2:	80 91 8a 01 	lds	r24, 0x018A	; 0x80018a <INV_EXT_SHDN_PIN+0x8>
+ 2e6:	90 91 8b 01 	lds	r25, 0x018B	; 0x80018b <INV_EXT_SHDN_PIN+0x9>
+ 2ea:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(LED_PIN);
+ 2ee:	00 91 78 01 	lds	r16, 0x0178	; 0x800178 <LED_PIN>
+ 2f2:	10 91 79 01 	lds	r17, 0x0179	; 0x800179 <LED_PIN+0x1>
+ 2f6:	20 91 7a 01 	lds	r18, 0x017A	; 0x80017a <LED_PIN+0x2>
+ 2fa:	30 91 7b 01 	lds	r19, 0x017B	; 0x80017b <LED_PIN+0x3>
+ 2fe:	40 91 7c 01 	lds	r20, 0x017C	; 0x80017c <LED_PIN+0x4>
+ 302:	50 91 7d 01 	lds	r21, 0x017D	; 0x80017d <LED_PIN+0x5>
+ 306:	60 91 7e 01 	lds	r22, 0x017E	; 0x80017e <LED_PIN+0x6>
+ 30a:	70 91 7f 01 	lds	r23, 0x017F	; 0x80017f <LED_PIN+0x7>
+ 30e:	80 91 80 01 	lds	r24, 0x0180	; 0x800180 <LED_PIN+0x8>
+ 312:	90 91 81 01 	lds	r25, 0x0181	; 0x800181 <LED_PIN+0x9>
+ 316:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(LINK_CUR_PIN);
+ 31a:	00 91 6e 01 	lds	r16, 0x016E	; 0x80016e <LINK_CUR_PIN>
+ 31e:	10 91 6f 01 	lds	r17, 0x016F	; 0x80016f <LINK_CUR_PIN+0x1>
+ 322:	20 91 70 01 	lds	r18, 0x0170	; 0x800170 <LINK_CUR_PIN+0x2>
+ 326:	30 91 71 01 	lds	r19, 0x0171	; 0x800171 <LINK_CUR_PIN+0x3>
+ 32a:	40 91 72 01 	lds	r20, 0x0172	; 0x800172 <LINK_CUR_PIN+0x4>
+ 32e:	50 91 73 01 	lds	r21, 0x0173	; 0x800173 <LINK_CUR_PIN+0x5>
+ 332:	60 91 74 01 	lds	r22, 0x0174	; 0x800174 <LINK_CUR_PIN+0x6>
+ 336:	70 91 75 01 	lds	r23, 0x0175	; 0x800175 <LINK_CUR_PIN+0x7>
+ 33a:	80 91 76 01 	lds	r24, 0x0176	; 0x800176 <LINK_CUR_PIN+0x8>
+ 33e:	90 91 77 01 	lds	r25, 0x0177	; 0x800177 <LINK_CUR_PIN+0x9>
+ 342:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(CMD_CURR_0_PIN);
+ 346:	00 91 64 01 	lds	r16, 0x0164	; 0x800164 <CMD_CURR_0_PIN>
+ 34a:	10 91 65 01 	lds	r17, 0x0165	; 0x800165 <CMD_CURR_0_PIN+0x1>
+ 34e:	20 91 66 01 	lds	r18, 0x0166	; 0x800166 <CMD_CURR_0_PIN+0x2>
+ 352:	30 91 67 01 	lds	r19, 0x0167	; 0x800167 <CMD_CURR_0_PIN+0x3>
+ 356:	40 91 68 01 	lds	r20, 0x0168	; 0x800168 <CMD_CURR_0_PIN+0x4>
+ 35a:	50 91 69 01 	lds	r21, 0x0169	; 0x800169 <CMD_CURR_0_PIN+0x5>
+ 35e:	60 91 6a 01 	lds	r22, 0x016A	; 0x80016a <CMD_CURR_0_PIN+0x6>
+ 362:	70 91 6b 01 	lds	r23, 0x016B	; 0x80016b <CMD_CURR_0_PIN+0x7>
+ 366:	80 91 6c 01 	lds	r24, 0x016C	; 0x80016c <CMD_CURR_0_PIN+0x8>
+ 36a:	90 91 6d 01 	lds	r25, 0x016D	; 0x80016d <CMD_CURR_0_PIN+0x9>
+ 36e:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(CMD_CURR_1_PIN);
+ 372:	00 91 5a 01 	lds	r16, 0x015A	; 0x80015a <CMD_CURR_1_PIN>
+ 376:	10 91 5b 01 	lds	r17, 0x015B	; 0x80015b <CMD_CURR_1_PIN+0x1>
+ 37a:	20 91 5c 01 	lds	r18, 0x015C	; 0x80015c <CMD_CURR_1_PIN+0x2>
+ 37e:	30 91 5d 01 	lds	r19, 0x015D	; 0x80015d <CMD_CURR_1_PIN+0x3>
+ 382:	40 91 5e 01 	lds	r20, 0x015E	; 0x80015e <CMD_CURR_1_PIN+0x4>
+ 386:	50 91 5f 01 	lds	r21, 0x015F	; 0x80015f <CMD_CURR_1_PIN+0x5>
+ 38a:	60 91 60 01 	lds	r22, 0x0160	; 0x800160 <CMD_CURR_1_PIN+0x6>
+ 38e:	70 91 61 01 	lds	r23, 0x0161	; 0x800161 <CMD_CURR_1_PIN+0x7>
+ 392:	80 91 62 01 	lds	r24, 0x0162	; 0x800162 <CMD_CURR_1_PIN+0x8>
+ 396:	90 91 63 01 	lds	r25, 0x0163	; 0x800163 <CMD_CURR_1_PIN+0x9>
+ 39a:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(CMD_CURR_2_PIN);
+ 39e:	00 91 50 01 	lds	r16, 0x0150	; 0x800150 <CMD_CURR_2_PIN>
+ 3a2:	10 91 51 01 	lds	r17, 0x0151	; 0x800151 <CMD_CURR_2_PIN+0x1>
+ 3a6:	20 91 52 01 	lds	r18, 0x0152	; 0x800152 <CMD_CURR_2_PIN+0x2>
+ 3aa:	30 91 53 01 	lds	r19, 0x0153	; 0x800153 <CMD_CURR_2_PIN+0x3>
+ 3ae:	40 91 54 01 	lds	r20, 0x0154	; 0x800154 <CMD_CURR_2_PIN+0x4>
+ 3b2:	50 91 55 01 	lds	r21, 0x0155	; 0x800155 <CMD_CURR_2_PIN+0x5>
+ 3b6:	60 91 56 01 	lds	r22, 0x0156	; 0x800156 <CMD_CURR_2_PIN+0x6>
+ 3ba:	70 91 57 01 	lds	r23, 0x0157	; 0x800157 <CMD_CURR_2_PIN+0x7>
+ 3be:	80 91 58 01 	lds	r24, 0x0158	; 0x800158 <CMD_CURR_2_PIN+0x8>
+ 3c2:	90 91 59 01 	lds	r25, 0x0159	; 0x800159 <CMD_CURR_2_PIN+0x9>
+ 3c6:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(CMD_CURR_3_PIN);
+ 3ca:	00 91 46 01 	lds	r16, 0x0146	; 0x800146 <CMD_CURR_3_PIN>
+ 3ce:	10 91 47 01 	lds	r17, 0x0147	; 0x800147 <CMD_CURR_3_PIN+0x1>
+ 3d2:	20 91 48 01 	lds	r18, 0x0148	; 0x800148 <CMD_CURR_3_PIN+0x2>
+ 3d6:	30 91 49 01 	lds	r19, 0x0149	; 0x800149 <CMD_CURR_3_PIN+0x3>
+ 3da:	40 91 4a 01 	lds	r20, 0x014A	; 0x80014a <CMD_CURR_3_PIN+0x4>
+ 3de:	50 91 4b 01 	lds	r21, 0x014B	; 0x80014b <CMD_CURR_3_PIN+0x5>
+ 3e2:	60 91 4c 01 	lds	r22, 0x014C	; 0x80014c <CMD_CURR_3_PIN+0x6>
+ 3e6:	70 91 4d 01 	lds	r23, 0x014D	; 0x80014d <CMD_CURR_3_PIN+0x7>
+ 3ea:	80 91 4e 01 	lds	r24, 0x014E	; 0x80014e <CMD_CURR_3_PIN+0x8>
+ 3ee:	90 91 4f 01 	lds	r25, 0x014F	; 0x80014f <CMD_CURR_3_PIN+0x9>
+ 3f2:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(CMD_CURR_4_PIN);
+ 3f6:	00 91 3c 01 	lds	r16, 0x013C	; 0x80013c <CMD_CURR_4_PIN>
+ 3fa:	10 91 3d 01 	lds	r17, 0x013D	; 0x80013d <CMD_CURR_4_PIN+0x1>
+ 3fe:	20 91 3e 01 	lds	r18, 0x013E	; 0x80013e <CMD_CURR_4_PIN+0x2>
+ 402:	30 91 3f 01 	lds	r19, 0x013F	; 0x80013f <CMD_CURR_4_PIN+0x3>
+ 406:	40 91 40 01 	lds	r20, 0x0140	; 0x800140 <CMD_CURR_4_PIN+0x4>
+ 40a:	50 91 41 01 	lds	r21, 0x0141	; 0x800141 <CMD_CURR_4_PIN+0x5>
+ 40e:	60 91 42 01 	lds	r22, 0x0142	; 0x800142 <CMD_CURR_4_PIN+0x6>
+ 412:	70 91 43 01 	lds	r23, 0x0143	; 0x800143 <CMD_CURR_4_PIN+0x7>
+ 416:	80 91 44 01 	lds	r24, 0x0144	; 0x800144 <CMD_CURR_4_PIN+0x8>
+ 41a:	90 91 45 01 	lds	r25, 0x0145	; 0x800145 <CMD_CURR_4_PIN+0x9>
+ 41e:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(YLW_L_PIN);
+ 422:	00 91 32 01 	lds	r16, 0x0132	; 0x800132 <YLW_L_PIN>
+ 426:	10 91 33 01 	lds	r17, 0x0133	; 0x800133 <YLW_L_PIN+0x1>
+ 42a:	20 91 34 01 	lds	r18, 0x0134	; 0x800134 <YLW_L_PIN+0x2>
+ 42e:	30 91 35 01 	lds	r19, 0x0135	; 0x800135 <YLW_L_PIN+0x3>
+ 432:	40 91 36 01 	lds	r20, 0x0136	; 0x800136 <YLW_L_PIN+0x4>
+ 436:	50 91 37 01 	lds	r21, 0x0137	; 0x800137 <YLW_L_PIN+0x5>
+ 43a:	60 91 38 01 	lds	r22, 0x0138	; 0x800138 <YLW_L_PIN+0x6>
+ 43e:	70 91 39 01 	lds	r23, 0x0139	; 0x800139 <YLW_L_PIN+0x7>
+ 442:	80 91 3a 01 	lds	r24, 0x013A	; 0x80013a <YLW_L_PIN+0x8>
+ 446:	90 91 3b 01 	lds	r25, 0x013B	; 0x80013b <YLW_L_PIN+0x9>
+ 44a:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(YLW_H_PIN);
+ 44e:	00 91 28 01 	lds	r16, 0x0128	; 0x800128 <YLW_H_PIN>
+ 452:	10 91 29 01 	lds	r17, 0x0129	; 0x800129 <YLW_H_PIN+0x1>
+ 456:	20 91 2a 01 	lds	r18, 0x012A	; 0x80012a <YLW_H_PIN+0x2>
+ 45a:	30 91 2b 01 	lds	r19, 0x012B	; 0x80012b <YLW_H_PIN+0x3>
+ 45e:	40 91 2c 01 	lds	r20, 0x012C	; 0x80012c <YLW_H_PIN+0x4>
+ 462:	50 91 2d 01 	lds	r21, 0x012D	; 0x80012d <YLW_H_PIN+0x5>
+ 466:	60 91 2e 01 	lds	r22, 0x012E	; 0x80012e <YLW_H_PIN+0x6>
+ 46a:	70 91 2f 01 	lds	r23, 0x012F	; 0x80012f <YLW_H_PIN+0x7>
+ 46e:	80 91 30 01 	lds	r24, 0x0130	; 0x800130 <YLW_H_PIN+0x8>
+ 472:	90 91 31 01 	lds	r25, 0x0131	; 0x800131 <YLW_H_PIN+0x9>
+ 476:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(GRN_L_PIN);
+ 47a:	00 91 1e 01 	lds	r16, 0x011E	; 0x80011e <GRN_L_PIN>
+ 47e:	10 91 1f 01 	lds	r17, 0x011F	; 0x80011f <GRN_L_PIN+0x1>
+ 482:	20 91 20 01 	lds	r18, 0x0120	; 0x800120 <GRN_L_PIN+0x2>
+ 486:	30 91 21 01 	lds	r19, 0x0121	; 0x800121 <GRN_L_PIN+0x3>
+ 48a:	40 91 22 01 	lds	r20, 0x0122	; 0x800122 <GRN_L_PIN+0x4>
+ 48e:	50 91 23 01 	lds	r21, 0x0123	; 0x800123 <GRN_L_PIN+0x5>
+ 492:	60 91 24 01 	lds	r22, 0x0124	; 0x800124 <GRN_L_PIN+0x6>
+ 496:	70 91 25 01 	lds	r23, 0x0125	; 0x800125 <GRN_L_PIN+0x7>
+ 49a:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <GRN_L_PIN+0x8>
+ 49e:	90 91 27 01 	lds	r25, 0x0127	; 0x800127 <GRN_L_PIN+0x9>
+ 4a2:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(GRN_H_PIN);
+ 4a6:	00 91 14 01 	lds	r16, 0x0114	; 0x800114 <GRN_H_PIN>
+ 4aa:	10 91 15 01 	lds	r17, 0x0115	; 0x800115 <GRN_H_PIN+0x1>
+ 4ae:	20 91 16 01 	lds	r18, 0x0116	; 0x800116 <GRN_H_PIN+0x2>
+ 4b2:	30 91 17 01 	lds	r19, 0x0117	; 0x800117 <GRN_H_PIN+0x3>
+ 4b6:	40 91 18 01 	lds	r20, 0x0118	; 0x800118 <GRN_H_PIN+0x4>
+ 4ba:	50 91 19 01 	lds	r21, 0x0119	; 0x800119 <GRN_H_PIN+0x5>
+ 4be:	60 91 1a 01 	lds	r22, 0x011A	; 0x80011a <GRN_H_PIN+0x6>
+ 4c2:	70 91 1b 01 	lds	r23, 0x011B	; 0x80011b <GRN_H_PIN+0x7>
+ 4c6:	80 91 1c 01 	lds	r24, 0x011C	; 0x80011c <GRN_H_PIN+0x8>
+ 4ca:	90 91 1d 01 	lds	r25, 0x011D	; 0x80011d <GRN_H_PIN+0x9>
+ 4ce:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(BLU_L_PIN);
+ 4d2:	00 91 0a 01 	lds	r16, 0x010A	; 0x80010a <BLU_L_PIN>
+ 4d6:	10 91 0b 01 	lds	r17, 0x010B	; 0x80010b <BLU_L_PIN+0x1>
+ 4da:	20 91 0c 01 	lds	r18, 0x010C	; 0x80010c <BLU_L_PIN+0x2>
+ 4de:	30 91 0d 01 	lds	r19, 0x010D	; 0x80010d <BLU_L_PIN+0x3>
+ 4e2:	40 91 0e 01 	lds	r20, 0x010E	; 0x80010e <BLU_L_PIN+0x4>
+ 4e6:	50 91 0f 01 	lds	r21, 0x010F	; 0x80010f <BLU_L_PIN+0x5>
+ 4ea:	60 91 10 01 	lds	r22, 0x0110	; 0x800110 <BLU_L_PIN+0x6>
+ 4ee:	70 91 11 01 	lds	r23, 0x0111	; 0x800111 <BLU_L_PIN+0x7>
+ 4f2:	80 91 12 01 	lds	r24, 0x0112	; 0x800112 <BLU_L_PIN+0x8>
+ 4f6:	90 91 13 01 	lds	r25, 0x0113	; 0x800113 <BLU_L_PIN+0x9>
+ 4fa:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+    gpio_init_pin(BLU_H_PIN);
+ 4fe:	00 91 00 01 	lds	r16, 0x0100	; 0x800100 <BLU_H_PIN>
+ 502:	10 91 01 01 	lds	r17, 0x0101	; 0x800101 <BLU_H_PIN+0x1>
+ 506:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <BLU_H_PIN+0x2>
+ 50a:	30 91 03 01 	lds	r19, 0x0103	; 0x800103 <BLU_H_PIN+0x3>
+ 50e:	40 91 04 01 	lds	r20, 0x0104	; 0x800104 <BLU_H_PIN+0x4>
+ 512:	50 91 05 01 	lds	r21, 0x0105	; 0x800105 <BLU_H_PIN+0x5>
+ 516:	60 91 06 01 	lds	r22, 0x0106	; 0x800106 <BLU_H_PIN+0x6>
+ 51a:	70 91 07 01 	lds	r23, 0x0107	; 0x800107 <BLU_H_PIN+0x7>
+ 51e:	80 91 08 01 	lds	r24, 0x0108	; 0x800108 <BLU_H_PIN+0x8>
+ 522:	90 91 09 01 	lds	r25, 0x0109	; 0x800109 <BLU_H_PIN+0x9>
+ 526:	0e 94 71 00 	call	0xe2	; 0xe2 <gpio_init_pin>
+
+    while (1) 
+    {
+        gpio_toggle_pin(LED_PIN);
+ 52a:	00 91 78 01 	lds	r16, 0x0178	; 0x800178 <LED_PIN>
+ 52e:	10 91 79 01 	lds	r17, 0x0179	; 0x800179 <LED_PIN+0x1>
+ 532:	20 91 7a 01 	lds	r18, 0x017A	; 0x80017a <LED_PIN+0x2>
+ 536:	30 91 7b 01 	lds	r19, 0x017B	; 0x80017b <LED_PIN+0x3>
+ 53a:	40 91 7c 01 	lds	r20, 0x017C	; 0x80017c <LED_PIN+0x4>
+ 53e:	50 91 7d 01 	lds	r21, 0x017D	; 0x80017d <LED_PIN+0x5>
+ 542:	60 91 7e 01 	lds	r22, 0x017E	; 0x80017e <LED_PIN+0x6>
+ 546:	70 91 7f 01 	lds	r23, 0x017F	; 0x80017f <LED_PIN+0x7>
+ 54a:	80 91 80 01 	lds	r24, 0x0180	; 0x800180 <LED_PIN+0x8>
+ 54e:	90 91 81 01 	lds	r25, 0x0181	; 0x800181 <LED_PIN+0x9>
+ 552:	0e 94 ce 00 	call	0x19c	; 0x19c <gpio_toggle_pin>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 556:	2f ef       	ldi	r18, 0xFF	; 255
+ 558:	89 e6       	ldi	r24, 0x69	; 105
+ 55a:	98 e1       	ldi	r25, 0x18	; 24
+ 55c:	21 50       	subi	r18, 0x01	; 1
+ 55e:	80 40       	sbci	r24, 0x00	; 0
+ 560:	90 40       	sbci	r25, 0x00	; 0
+ 562:	e1 f7       	brne	.-8      	; 0x55c <__LOCK_REGION_LENGTH__+0x15c>
+ 564:	00 c0       	rjmp	.+0      	; 0x566 <__LOCK_REGION_LENGTH__+0x166>
+ 566:	00 00       	nop
+ 568:	e0 cf       	rjmp	.-64     	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+
+0000056a <_exit>:
+ 56a:	f8 94       	cli
+
+0000056c <__stop_program>:
+ 56c:	ff cf       	rjmp	.-2      	; 0x56c <__stop_program>
